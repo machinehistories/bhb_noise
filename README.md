@@ -1,4 +1,5 @@
 # bhb_noise
+for https://github.com/wntrblm/Big_Honking_Button module using circuit python https://github.com/adafruit/circuitpython.
 this seperates the button and gate inputs to provide 4 ways to generate noise and gates
 It offers 4 noise makers and gate generators for big honkin button module
 Just feed in some melodic cv's and away you go
