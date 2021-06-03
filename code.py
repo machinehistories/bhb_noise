@@ -51,7 +51,7 @@ noise_sample = audiocore.RawSample(noise)
 # values.
 frequency = 2
 noise_sample.sample_rate = frequency * len(noise)
-sample = bhb.load_sample("samples/reverse.wav")
+sample = bhb.load_sample("samples/dist.wav")
 burst_intervals = [0.05, 0.2, 0.03, 0.05, 0.1]
 
 
@@ -97,8 +97,10 @@ while True:
                 if pressing > 15:
                     pressing = 0
         if short_press is True:
+            bhb.gate_out = True
             bhb.play(button_sample, pitch_cv=bhb.pitch_in)
             pressing = 0
+            bhb.gate_out = False
         
     long_press = False
     short_press = False
