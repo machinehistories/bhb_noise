@@ -69,6 +69,8 @@ while True:
         noise_sample.sample_rate = frequency * len(noise)
         random_sine = random.uniform(0,10.0)
         bhb.play(sine_sample , pitch_cv=bhb.pitch_in* int(math.sin(random_val) * random_sine), loop=True)
+        if bhb.pitch_in > 3:
+            bhb.gate_out = True
             
     if bhb.button is True:
         pressing +=1
